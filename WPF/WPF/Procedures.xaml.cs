@@ -68,8 +68,16 @@ namespace WPF
                        }).ToList();
 
            treatmentsDG.ItemsSource = ptt;
+        }
 
-            //var temp = 1;
+        private void OwnerBt_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Owners.xaml", UriKind.Relative));
+        }
+
+        private void Procedures1_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Procedures.xaml", UriKind.Relative));
         }
     }
 }

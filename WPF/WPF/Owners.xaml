@@ -1,0 +1,39 @@
+﻿<Page x:Class="WPF.Owners"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Owners" Loaded="Page_Loaded">
+
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Procedures" Width="150" Height="50" x:Name="Procedures1" Click="Procedures1_Click"/>
+                <Button Content="Owners" Width="150" Height="50" x:Name="OwnerBt" Click="OwnerBt_Click"/>
+            </StackPanel>
+            <Label Content="Owners" FontSize="20" FontWeight="Bold"/>
+            <DataGrid x:Name="ownersDG" AutoGenerateColumns="False" SelectionChanged="ownersDG_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="OwnerID" Binding="{Binding OwnerID}"/>
+                    <DataGridTextColumn Width="*" Header="Surname" Binding="{Binding Surname}"/>
+                    <DataGridTextColumn Width="*" Header="GivenName" Binding="{Binding GivenName}"/>
+                    <DataGridTextColumn Width="*" Header="Phone" Binding="{Binding Phone}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label>Surname</Label>
+            <TextBox x:Name="SurnameTb"></TextBox>
+            <Label>Given Name</Label>
+            <TextBox x:Name="GivenNameTb"></TextBox>
+            <Label>Phone</Label>
+            <TextBox x:Name="PhoneTb"></TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="CreateBt" Margin="10" MinWidth="100" Content="Create" Click="CreateBt_Click"/>
+                <Button x:Name="UpdateBt" Margin="10" MinWidth="100" Content="Update" Click="UpdateBt_Click"/>
+                <Button x:Name="DeleteBt" Margin="10" MinWidth="100" Content="Delete" Click="DeleteBt_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -10,24 +10,28 @@
 
     <Grid>
         <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Procedures" Width="150" Height="50" x:Name="Procedures1" Click="Procedures1_Click"/>
+                <Button Content="Owners" Width="150" Height="50" x:Name="OwnerBt" Click="OwnerBt_Click"/>
+            </StackPanel>
             <Label Content="Procedures" FontSize="20" FontWeight="Bold"/>
             <DataGrid x:Name="procedureDG"  AutoGenerateColumns="False" SelectionChanged="procedureDG_SelectionChanged" >
                 <!-- <DataGrid x:Name="procedureDG" ItemsSource="{Binding procedureList}"  SelectionChanged="procedureDG_SelectionChanged">  -->
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="Procedure ID" Binding="{Binding ProcedureID}"></DataGridTextColumn>
-                    <DataGridTextColumn Width="*" Header="Description" Binding="{Binding Description}"></DataGridTextColumn>
-                    <DataGridTextColumn Width="*" Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Procedure ID" Binding="{Binding ProcedureID}"/>
+                    <DataGridTextColumn Width="*" Header="Description" Binding="{Binding Description}"/>
+                    <DataGridTextColumn Width="*" Header="Price" Binding="{Binding Price}"/>
                 </DataGrid.Columns>
             </DataGrid>
             <Label Content="Treatments" FontSize="20" FontWeight="Bold"/>
             <DataGrid x:Name="treatmentsDG"  AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="Pet Name" Binding="{Binding PetName}"></DataGridTextColumn>
-                    <DataGridTextColumn Width="*" Header="Owner ID" Binding="{Binding OwnerID}"></DataGridTextColumn>
-                    <DataGridTextColumn Width="*" Header="Procedure ID" Binding="{Binding ProcedureID}"></DataGridTextColumn>
-                    <DataGridTextColumn Width="*" Header="Date" Binding="{Binding Date}"></DataGridTextColumn>
-                    <DataGridTextColumn Width="*" Header="Notes" Binding="{Binding Notes}"></DataGridTextColumn>
-                    <DataGridTextColumn Width="*" Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Pet Name" Binding="{Binding PetName}"/>
+                    <DataGridTextColumn Width="*" Header="Owner ID" Binding="{Binding OwnerID}"/>
+                    <DataGridTextColumn Width="*" Header="Procedure ID" Binding="{Binding ProcedureID}"/>
+                    <DataGridTextColumn Width="*" Header="Date" Binding="{Binding Date}"/>
+                    <DataGridTextColumn Width="*" Header="Notes" Binding="{Binding Notes}"/>
+                    <DataGridTextColumn Width="*" Header="Price" Binding="{Binding Price}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

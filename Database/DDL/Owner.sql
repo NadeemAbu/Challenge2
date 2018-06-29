@@ -4,5 +4,6 @@
 	[Surname] VARCHAR(50),
 	[GivenName] VARCHAR(50),
 	[Phone] INT,
-	CONSTRAINT PK_Owner PRIMARY KEY (OwnerID)
+	CONSTRAINT PK_Owner PRIMARY KEY (OwnerID),
+	CONSTRAINT Uq_Phone UNIQUE (OwnerID, Phone)
 )

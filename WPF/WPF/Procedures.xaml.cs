@@ -21,6 +21,7 @@ namespace WPF
     /// </summary>
     public partial class Procedures : Page
     {
+        public NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         APIClient client;
         List<ProcedureClass> proceduresClassssss;
         List<TreatmentClass> treatmentClassssss;
@@ -36,6 +37,9 @@ namespace WPF
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+
+            logger.Trace("Procedure Page Loaded");
+
             client = new APIClient();
            proceduresClassssss = await client.GetProcedures();
           treatmentClassssss = await client.GetTreatments();

@@ -11,10 +11,22 @@
     <Grid>
         <StackPanel>
             <Label Content="Procedures" FontSize="20" FontWeight="Bold"/>
-            <DataGrid x:Name="procedureDG" ItemsSource="{Binding procedureList}"  SelectionChanged="procedureDG_SelectionChanged">
+            <DataGrid x:Name="procedureDG"  AutoGenerateColumns="False" SelectionChanged="procedureDG_SelectionChanged" >
+                <!-- <DataGrid x:Name="procedureDG" ItemsSource="{Binding procedureList}"  SelectionChanged="procedureDG_SelectionChanged">  -->
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="ProcedureID" Binding="{Binding ProcedureID}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Procedure ID" Binding="{Binding ProcedureID}"></DataGridTextColumn>
                     <DataGridTextColumn Width="*" Header="Description" Binding="{Binding Description}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label Content="Treatments" FontSize="20" FontWeight="Bold"/>
+            <DataGrid x:Name="treatmentsDG"  AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="Pet Name" Binding="{Binding PetName}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Owner ID" Binding="{Binding OwnerID}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Procedure ID" Binding="{Binding ProcedureID}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Date" Binding="{Binding Date}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="*" Header="Notes" Binding="{Binding Notes}"></DataGridTextColumn>
                     <DataGridTextColumn Width="*" Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>

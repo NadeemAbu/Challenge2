@@ -18,7 +18,7 @@ namespace ClassLibrary
             set { procedureID = value; }
         }
 
-        public string Descrtiption
+        public string Description
         {
             get { return description; }
             set { description = value; }

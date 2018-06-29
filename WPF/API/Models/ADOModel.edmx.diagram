@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fcb8ef466bba490f949cff2ae837183c" Name="Diagram1">
+        <EntityTypeShape EntityType="Challenge2Model.Owner" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Challenge2Model.Pet" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Challenge2Model.Procedure" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Challenge2Model.Treatment" Width="1.5" PointX="3" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Challenge2Model.database_firewall_rules" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <AssociationConnector Association="Challenge2Model.FK_POwnerID" ManuallyRouted="false" />
+        <AssociationConnector Association="Challenge2Model.FK_TOwnerID" ManuallyRouted="false" />
+        <AssociationConnector Association="Challenge2Model.Fk_ProcedureID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Challenge2Model.OwnerView" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Challenge2Model.PetView" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="Challenge2Model.ProcedureView" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Challenge2Model.TreatmentView" Width="1.5" PointX="5.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
